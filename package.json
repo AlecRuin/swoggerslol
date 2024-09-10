@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production --base-href 'https://alecruin.github.io/swoggerslol'",
-    "deploy":"ng build --configuration=production --base-href 'https://alecruin.github.io/swoggerslol' && ng deploy --dir=dist/swoggerslol/browser --repo='https://github.com/AlecRuin/swoggerslol'",
+    "build": "ng build --configuration=production --base-href https://alecruin.github.io/swoggerslol/",
+    "deploy":"ng build --configuration=production --base-href 'https://alecruin.github.io/swoggerslol/' && ng deploy --dir=dist/swoggerslol/browser --repo='https://github.com/AlecRuin/swoggerslol/' --base-href=https://alecruin.github.io/swoggerslol/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
