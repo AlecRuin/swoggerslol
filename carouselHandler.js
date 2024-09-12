@@ -81,16 +81,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     let currentIndex = 0;
 
     function showNextItem() {
-        items[currentIndex].style.transform = `translateX(-100%)`;
-        items[currentIndex].style.width = "25%"
-        items[currentIndex].style.zIndex = 1
+        items[currentIndex].classList.add("next")
+        items[currentIndex].classList.remove("previous","active")
         currentIndex = (currentIndex + 1) % items.length;
-        items[currentIndex].style.transform = `translateX(0)`;
-        items[currentIndex].style.width = "33%"
-        items[currentIndex].style.zIndex = 2
-        items[(currentIndex+1)%items.length].style.transform = `translateX(100%)`
-        items[(currentIndex+1)%items.length].style.width = "25%"
-        items[(currentIndex+1)%items.length].style.zIndex = 0
+        items[currentIndex].classList.add("active")
+        items[currentIndex].classList.remove("next","previous")
+        items[(currentIndex+1)%items.length].classList.add("previous")
+        items[(currentIndex+1)%items.length].classList.remove("active","next")
     }
     showNextItem()
     setInterval(showNextItem, 6000);

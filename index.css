@@ -12,6 +12,10 @@
     --quaternary-color: 102, 250, 208;
     --lighter-quaternary-color: 164, 255, 229;
 }
+html,body{
+    margin: 0;
+    overflow-x: hidden;
+}
 html{
     background-color: rgb(var(--primary-color));
     color: white;
@@ -29,6 +33,32 @@ a {
     background: none; 
     border: none; 
 }
+
+.afs-largest{
+    font-size: calc(100px + 2vmin);
+}
+.afs-larger{
+    font-size: calc(16px + 2vmin);
+}
+.afs-large{
+    font-size: calc(14px + 2vmin);
+}
+.afs-normal{
+    font-size: calc(12px + 2vmin);
+}
+.afs-small{
+    font-size:calc(10px + 1.66vmin)
+}
+.afs-smaller{
+    font-size:calc(10px + 1.33vmin)
+}
+.afs-smallest{
+    font-size:calc(10px + 1vmin)
+}
+.afs-micro{
+    font-size:calc(8px + 0.5vmin)
+}
+
 .basic-text-style{
     font-weight: 700;
     color: rgb(var(--lightest-secondary-color));
@@ -142,6 +172,9 @@ a {
 .mb-0rem{
     margin-bottom: 0rem;
 }
+.mb-1rem{
+    margin-bottom: 3rem;
+}
 .mbt-3rem{
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -179,6 +212,9 @@ a {
 }
 .text-center{
     text-align: center;
+}
+.text-left{
+    text-align: left;
 }
 .flex{
     display: flex;
@@ -232,13 +268,7 @@ a {
 .fs-1vw{
     font-size: 1vw;
 }
-.afs-1vw{
-    font-size: 1vw;
-}
-.afs-1-1-2vw{
-    font-size: 1.5vw;
-}
-.fs-1-1-2vw{
+.aafs-normal{
     font-size: 1.5vw;
 }
 .fs-1-2vw{
@@ -264,6 +294,44 @@ a {
 }
 .overflow-hidden{
     overflow: hidden;
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid rgb(var(--lightest-primary-color));
+    padding: 0px;
+}
+
+.popup{
+    position: absolute;
+    background-color: rgb(var(--lightest-primary-color));
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    visibility: hidden;
+    z-index: 10;
+    transform: translate(-50%, -100%);
+}
+.popup::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Position arrow at the bottom of the popup */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent; /* Create arrow shape */
+  }
+
+
+.version-container{
+    width: 50%;
+}
+.black-border{
+    border: calc(2.5px + 0.5vmin) solid rgb(0, 0, 0);
+    border-radius: calc(5px + 2vmin);
 }
 .Mod-List{
     display: flex;
@@ -291,8 +359,6 @@ a {
     justify-content: right;
     aspect-ratio: 14/4;
     box-shadow: 0px 15px 20px 20px rgb(0 0 0 / 40%);
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 20px;
     overflow: hidden; 
 }
 .nugget-body{
@@ -331,6 +397,21 @@ a {
     overflow: hidden;
     box-shadow: 4px 12px 20px 5px rgb(0 0 0 / 74%);
 }
+.carousel-item.active{
+    transform: translateX(0); /* Current item in view */
+    width: 33%; /* Active item width */
+    z-index: 2;
+}
+.carousel-item.next{
+    transform: translateX(-100%); /* Current item in view */
+    width: 25%; /* Active item width */
+    z-index: 1;
+}
+.carousel-item.previous{
+    transform: translateX(100%); /* Current item in view */
+    width: 25%; /* Active item width */
+    z-index: 0;
+}
 .underline{
     width: 50%;
     background-color: rgb(248, 234, 209);
@@ -338,7 +419,7 @@ a {
     margin: auto;
 }
 .announcement{
-    height: 8%;
+    height: 5%;
 }
 .download-button{
     border: 1vw rgb(34, 44, 63) solid;
@@ -474,6 +555,15 @@ a {
 .quaternary-glowbox{
     box-shadow: 0px 0px 12px 2px rgba(var(--quaternary-color), 0.74);
 }
+.download-links{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 3rem 0px;
+}
+.hide{
+    color: rgb(7, 15, 23);
+}
 @media (max-width:100em) {
     .banner{
         display: none;
@@ -481,6 +571,9 @@ a {
     .mod-info{
         width: 95%;
         margin: 1vw;
+    }
+    .Mod-List{
+        width: 95%;
     }
     .navigation-box{
         display: none;
@@ -496,10 +589,38 @@ a {
         margin-top: 3vw;
         margin-bottom: 3vw;
     }
-    .afs-1vw{
-        font-size: 1.5vw;
+    .hero-title{
+        margin-top: calc(10px + 1vmin);
     }
-    .afs-1-1-2vw{
-        font-size: 2vw;
+    .announcement{
+        margin: auto;
+        width: 100%;
     }
+    .preview-nugget{
+        width: 85%;
+    }
+    .carousel-item.previous,.carousel-item.next{
+        width: 33%;
+    }
+    .carousel-item.active{
+        width: 50%;
+    }
+    .wrap-when-small{
+        white-space:inherit;
+    }
+    .hide-when-small{
+        display: none;
+    }
+    .version-container{
+        width: 75%;
+    }
+    .download-links{
+        flex-direction: column;
+        margin: 1rem 0px;
+        width: 100px;
+    }
+    /* .bottom-buttons{
+        margin-bottom: 1rem;
+        margin-top: 0;
+    } */
 }

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         Mod_List.insertAdjacentHTML("beforeend",
             `
             <section class="w-100 mbt-1rem mrl-1rem"  id=${ModsArray[x]}>
-                <iframe class="preview-nugget ${(leftFlag?"float-left":"float-right")}" src=${"./iframes/"+encodeURIComponent(ModsArray[x])+".html"}></iframe>
+                <iframe class="preview-nugget black-border ${(leftFlag?"float-left":"float-right")}" src=${"./iframes/"+encodeURIComponent(ModsArray[x])+".html"}></iframe>
             </section>
             `)
         nav_list.insertAdjacentHTML("beforeend",`<li><a href="#${ModsArray[x]}">${ModsArrayWhitespace[x]}</a></li>`)
