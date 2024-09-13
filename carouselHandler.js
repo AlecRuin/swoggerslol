@@ -1,3 +1,4 @@
+
 const videosarray=[
     "./media/videos/DMC5 Dante as Riven showcase.mp4",
     "./media/videos/DMC5 Dante as Samira showcase.mp4",
@@ -42,6 +43,12 @@ const videonamesarr=[
 ]
 function changeVideo(VideoElement,SourceElement,AnchorRef,CaptionRef)
 {
+    console.log("Called")
+    console.log(VideoElement);
+    console.log(SourceElement);
+    console.log(AnchorRef);
+    console.log(CaptionRef);
+    
     var chosenVid = Math.floor(Math.random()*videosarray.length)
     SourceElement.src =videosarray[chosenVid] 
     AnchorRef.href = videotoyoutubearr[chosenVid]
@@ -56,11 +63,11 @@ document.addEventListener("DOMContentLoaded",()=>{
     var vid2 = document.getElementById("vid2")
     var source2 = document.getElementById("vid2source")
     var avid2 = document.getElementById("a-vid2")
-    var caption2 = document.getElementById("caption-1")
+    var caption2 = document.getElementById("caption-2")
     var vid3 = document.getElementById("vid3")
     var source3 = document.getElementById("vid3source")
     var avid3 = document.getElementById("a-vid3")
-    var caption3 = document.getElementById("caption-1")
+    var caption3 = document.getElementById("caption-3")
     vid1.defaultPlaybackRate=1.5
     vid2.defaultPlaybackRate=1.5
     vid3.defaultPlaybackRate=1.5
