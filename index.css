@@ -625,8 +625,14 @@ th,td{
         margin: 1rem 0px;
         width: 100px;
     }
+    
     /* .bottom-buttons{
         margin-bottom: 1rem;
         margin-top: 0;
     } */
+}
+@media (max-width:35em) {
+    table{
+        display: none;
+    }
 }
