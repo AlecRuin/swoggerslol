@@ -11,7 +11,11 @@ const videosarray=[
     "./media/videos/DMC5 Vergil as Yone showcase.mp4",
     "./media/videos/Full Build Gwen example.mp4",
     "./media/videos/DMC4 Berial as Hecarim showcase.mp4",
-    "./media/videos/JJK Gojo as Mordekaiser showcase.mp4"
+    "./media/videos/JJK Gojo as Mordekaiser showcase.mp4",
+
+    "./media/videos/DMC5 Nobody as Skarner showcase.mp4",
+    "./media/videos/DB Goku as Sett showcase.mp4",
+    "./media/videos/Sai as Hwei showcase.mp4"
 ]
 const videotoyoutubearr=[
     "https://youtu.be/KnL0gqAhf0o",
@@ -25,7 +29,10 @@ const videotoyoutubearr=[
     "https://youtu.be/cFuuaYxSnwA",
     "https://youtu.be/Kf28sD9UbW0",
     "https://youtu.be/Kec96RyRyxo",
-    "https://youtu.be/-Mg4DpYsdo0"
+    "https://youtu.be/-Mg4DpYsdo0",
+    "https://youtu.be/G0Nn1f_5ZEk",
+    "https://youtu.be/3eTIwl0HnFk",
+    "https://youtu.be/FbFqk3hAWqg"
 ]
 const videonamesarr=[
     "DMC5 Dante as Riven showcase",
@@ -37,9 +44,12 @@ const videonamesarr=[
     "DMC5 Vergil as Yasuo 2.0 showcase",
     "DMC5 Vergil as Yasuo showcase",
     "DMC5 Vergil as Yone showcase",
-    "Full Build Gwen example",
+    "Full Build Gwen showcase",
     "DMC4 Berial as Hecarim showcase",
-    "JJK's Gojo as Mordekaiser showcase"
+    "JJK's Gojo as Mordekaiser showcase",
+    "DMC5 Nobody as Skarner showcase",
+    "DB Goku as Sett showcase",
+    "Sai as Hwei showcase"
 ]
 function changeVideo(VideoElement,SourceElement,AnchorRef,CaptionRef)
 {
