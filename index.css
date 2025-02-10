@@ -26,6 +26,7 @@ html{
 }
 body{
     background-color: rgb(var(--primary-color));
+    overflow-y: hidden;
 }
 a {
     text-decoration: none; 
