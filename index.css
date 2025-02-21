@@ -15,6 +15,7 @@
 html,body{
     margin: 0;
     overflow-x: hidden;
+    height: 100%;
 }
 html{
     background-color: rgb(var(--primary-color));
@@ -26,7 +27,7 @@ html{
 }
 body{
     background-color: rgb(var(--primary-color));
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 a {
     text-decoration: none; 

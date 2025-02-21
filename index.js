@@ -12,7 +12,8 @@ const ModsArray=[
     "JJK-Gojo-as-Mordekaiser",
     "DMC5-Nobody-as-Skarner",
     "Sai-as-Hwei",
-    "DB-Goku-as-Sett"
+    "DB-Goku-as-Sett",
+    "JJK-Todo-as-Sett"
 ]
 const ModsArrayWhitespace=[
     "DMC5 Vergil as Yasuo",
@@ -28,7 +29,8 @@ const ModsArrayWhitespace=[
     "JJK Gojo as Mordekaiser",
     "DMC5 Nobody as Skarner",
     "Sai as Hwei",
-    "DB Goku as Sett"
+    "DB Goku as Sett",
+    "JJK Todo as Sett"
 ]
 function testing()
 {
