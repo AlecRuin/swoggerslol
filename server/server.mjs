@@ -1,44 +1,54 @@
 import "dotenv/config"
 import express from "express"
-import { default as rateLimit } from "express-rate-limit"
+// import { default as rateLimit } from "express-rate-limit"
 // const  {default:ApolloServer} =require("@apollo/server")
 import { ApolloServer } from "@apollo/server"
-import { expressMiddleware } from "@apollo/server/express4"
-const app = express()
+// import { expressMiddleware } from "@apollo/server/express4"
 import { join,dirname } from "path"
 import { fileURLToPath } from "url"
 import {resolvers,typeDefs} from "./models/index.mjs"
 import { ApolloServerPluginCacheControl } from "@apollo/server/plugin/cacheControl"
-import {default as cors} from "cors"
-import {connection} from "./config/connection.mjs"
-const port = process.env.PORT||3000;
-const limiter = rateLimit({
-    windowMs:15*60*1000, //15 mins
-    max: 100, //Limit each IP to 100 requests per windowMs
-    message:"Too many requests, please try again later."
-})
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const apollo = new ApolloServer({
+// import {default as cors} from "cors"
+import {default as DATABASE_CONNECTION} from "./config/connection.mjs"
+import {default as ApplyMiddleware} from "./config/middleware.mjs"
+import {SetDir,ClearFile,Log} from "./utils/logging.mjs"
+import {ROUTES} from "./controllers/index.mjs"
+const APP = express()
+const PORT = process.env.PORT||3000;
+// const LIMITER = rateLimit({
+//     windowMs:15*60*1000, //15 mins
+//     max: 100, //Limit each IP to 100 requests per windowMs
+//     message:"Too many requests, please try again later."
+// })
+const __DIRNAME = dirname(fileURLToPath(import.meta.url))
+const APOLLO = new ApolloServer({
     typeDefs,
     resolvers,
     csrfPrevention:true,
     cache:"bounded",
     plugins:[ApolloServerPluginCacheControl({defaultMaxAge:3600})]//Default cache is 1hr long
 })
+SetDir(join(__DIRNAME,"logs"))
+ClearFile()
 
-
-app.use(cors({origin:process.env.BASE_URL+":5173"}))
-app.use(limiter)
-app.use(express.json())
-app.use(express.static(join(__dirname,"../client/dist")))
-app.set("view engine","ejs")
-app.set("views","./views/html")
-app.get("*", (req, res) => {
-    res.sendFile(join(__dirname, "../client/dist", "index.html"));
-  });
-apollo.start().then(()=>{
-    app.use("/graphql",expressMiddleware(apollo))
-    console.log(`Graphql served at http://localhost:${port}/graphql`);
-    app.listen(port,()=>console.log(`Server is up on http://localhost:${port}`))
-    console.log("React is up on http://localhost:5173");
-})
+async function AttemptConnections(){
+    //Connect to DB first
+    try {
+        await DATABASE_CONNECTION
+        Log(new Error(),`Connection to DB established on ${process.env.MONGODB_URI}`);
+        //connect apollo
+        await APOLLO.start();
+        Log(new Error(),`Connection to APOLLO established on http://localhost:${PORT}/graphql`)
+        //connect middleware
+        ApplyMiddleware(APP,APOLLO,__DIRNAME)
+        //connect routes
+        APP.use(ROUTES)
+        //connect express
+        APP.listen(PORT,()=>Log(new Error(),`Connection to Express established on http://localhost:${PORT}`))
+    } catch (error) {
+        Log(new Error(),error)
+        console.log(error);
+        
+    }
+} 
+AttemptConnections()
