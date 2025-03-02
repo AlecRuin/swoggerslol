@@ -12,8 +12,8 @@ export default function About(){
         useEffect(()=>{
             if(data&&data.hello) setThing(data.hello);
         },[data])
-        if(loading) return <p>Loading...</p>
-        if(error)throw error
+        if(loading) return <p>Loading...</p>;
+        if(error)throw error;
         return(
             <>
                 <div>Henlo {thing}</div>
