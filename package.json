@@ -5,7 +5,8 @@
     "start":"nodemon server/server.mjs",
     "develop":"concurrently \"cd server && npm start\" \"cd client && npm run develop\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "build":"cd client && npm run build"
+    "build":"cd client && npm run build",
+    "seed":"cd server && node seeds/index.mjs"
   },
   "repository": {
     "type": "git",
