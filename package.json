@@ -1,0 +1,25 @@
+{
+  "name": "swoggerslol",
+  "version": "1.0.0",
+  "scripts": {
+    "start":"nodemon server/server.mjs",
+    "develop":"concurrently \"cd server && npm start\" \"cd client && npm run develop\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build":"cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlecRuin/swoggerslol.git"
+  },
+  "author": "Katlec Valentine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlecRuin/swoggerslol/issues"
+  },
+  "homepage": "https://github.com/AlecRuin/swoggerslol#readme",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+ 
