@@ -1,6 +1,6 @@
 
 .banner{
-    background-image: url("./public/images/banner.png");
+    background-image: url("./images/banner.png");
     width: 15%;
     max-width: 10vw;
     object-fit: fill;
