@@ -7,12 +7,12 @@ export default function Navigation({data}){
         return (
             <nav className="navigation-box">
                 <ul className="navigation-list">
-                    <h3 className="navigation-title">Table of contents</h3>
+                    <h3 style={{marginLeft:"10px",marginRight:"10px"}} className="fs-large navigation-title">Table of contents</h3>
                     <div className="simple-underline"></div>
                     {(data&&data.length>0)?data.map(element => {
                         return(
                             <li key={element}>
-                                <a className="no-decor" href={"#"+element.replace(/\s+/g,"-")}>{element}</a>
+                                <a className="no-decor fs-normal" href={"#"+element.replace(/\s+/g,"-")}>{element}</a>
                             </li>
                         )
                     }):"Loading..."}
@@ -42,6 +42,7 @@ export default function Navigation({data}){
 //         nav_list.insertAdjacentHTML("beforeend",`<li><a href="#${SectionIds[x]}">${(SectionTitle[x]!=undefined)?SectionTitle[x]:SectionIds[x]}</a></li>`)
 //     }
 // })
+
 // document.addEventListener("DOMContentLoaded",()=>{
 //     const Mod_List = document.querySelector(".Mod-List")
 //     const nav_list = document.querySelector(".navigation-list")
