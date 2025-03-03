@@ -25,11 +25,20 @@ export default function Home({set_nav_data}){
         console.log("data: ",data);
         return(
             <>
-                post title {
-                    posts.map(post=>{
-                        return(<Post key={post._id} data={post}/>)
-                    })
-                }
+                <div>
+                    Carousel
+                </div>
+                <div>
+                    announcements
+                </div>
+                <div>
+                    PROJECTS
+                </div>
+                    post title {
+                        posts.map(post=>{
+                            return(<Post key={post._id} data={post}/>)
+                        })
+                    }
             </> 
         )
     } catch (error) {

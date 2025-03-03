@@ -1,0 +1,29 @@
+
+.banner{
+    background-image: url("./public/images/banner.png");
+    width: 15%;
+    max-width: 10vw;
+    object-fit: fill;
+    overflow: visible;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    font-size: 8vw;
+    font-family: monospace;
+    min-height: 80vh;
+}
+@media (max-width:100em) {
+    .banner{
+        display: none;
+    }
+}
+.set{
+    --rgb1:var(--secondary);
+    --rgb2:var(--lightest-secondary);
+}
+.txt-shadow{
+    text-shadow: 0px 0px 10px var(--secondary);
+  }
