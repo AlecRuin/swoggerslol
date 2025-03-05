@@ -15,9 +15,14 @@ type Post{
     entry:[entries]
     version_history:[version_histories]
 }
+type Showcase{
+    video_title:String
+    youtube_link:String
+}
 type Query{
     hello: String
     GetAllPosts:[Post]
+    GetAllShowcases:[Showcase]
     GetPostByID(ID:ID!):Post
 }
 `

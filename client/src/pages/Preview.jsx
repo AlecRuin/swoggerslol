@@ -16,7 +16,7 @@ export default function Preview({data,index}){
                 <div style={{float:`${flipped?"left":"right"}`,aspectRatio:"14/4"}} className={`preview-nugget bg-primary black-border`}>
                     <div style={{flexDirection:`${flipped?"row-reverse":"row"}`}} className="flex h-100 w-100 jc-space-between">
                         <Link to={"/posts/"+post_title_hyphen}>
-                            <img className="h-100 preview-image" src={"/images/"+post_title_hyphen+".webp"}/>
+                            <img className="h-100 preview-image" src={"/images/mods/"+post_title_hyphen+".webp"}/>
                         </Link>
                         <div className="flex flex-column w-60 m-x-5">
                             <Link to={"/posts/"+post_title_hyphen} className="txt-grad-secondary shimmer m-x-a fs-large m-y-1">

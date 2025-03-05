@@ -1,5 +1,7 @@
+import { useQuery } from "@apollo/client"
 import useInterval from "../utils/useInterval"
 import React,{ useEffect, useState, useRef, forwardRef } from "react"
+import { GetAllShowcases } from "../utils/api/queries.mjs"
 
 const videosarray=[
     "./videos/DMC5 Dante as Riven showcase.mp4",
@@ -54,14 +56,17 @@ const videonamesarr=[
 ]
 
 const CarouselItem = forwardRef((props,ref)=>{
-    const [selectedVid,setSelectedVid] = useState(Math.floor(Math.random()*videosarray.length))
+    if(!props.videos)return(<div>Loading...</div>)
+    const [selectedVid,setSelectedVid] = useState(Math.floor(Math.random()*props.videos.length))
+    console.log("Props: ",props.videos);
+    
     return(
-        <a ref={ref} className="carousel-item w-25 h-a no-decor" target="_blank" href={videotoyoutubearr[selectedVid]}>
+        <a ref={ref} className="carousel-item w-25 h-a no-decor" target="_blank" href={props.videos[selectedVid].youtube_link}>
             <video className="image-stretch w-100 carousel-video" autoPlay muted>
-                <source src={videosarray[selectedVid]} className="source" type="video/mp4"/>
+                <source src={"/videos/"+props.videos[selectedVid].video_title.replace(/\s+/g,"-")+".webm"} className="source" type="video/mp4"/>
             </video>
             <p className="afs-smallest z-1 basic-text-style video-caption text-center m-a">
-                {videonamesarr[selectedVid]}
+                {props.videos[selectedVid].video_title}
             </p>
         </a>
     )
@@ -71,6 +76,8 @@ const CarouselItem = forwardRef((props,ref)=>{
 export default function Carousel(){
     const itemsRef = useRef([]);
     const [isPlaying,setPlaying] = useState(false)
+    const {loading,errror,data} = useQuery(GetAllShowcases)
+    const [videos,setVideos] = useState(null)
     let currentIndex=0;
     function showNextItem(){
         if(itemsRef.current.length<1||itemsRef.current[0]==null)return;
@@ -118,13 +125,19 @@ export default function Carousel(){
     useInterval(()=>{
         showNextItem()
     },isPlaying?6000:null)
+    useEffect(()=>{
+        if(data&&data.GetAllShowcases.length>0)setVideos(data.GetAllShowcases);
+    },[data])
 
+    if(loading) return(<div>Loading...</div>);
+    if(data&&data.GetAllShowcases)console.log("data: ",data.GetAllShowcases);
     return (
         <div className="basic-text-style w-100 carousel">
         {
             [...Array(3)].map((_, index) => (
             <CarouselItem
                 key={index}
+                videos={videos}
                 ref={(el)=>itemsRef.current[index]=el}
             />)
             )
