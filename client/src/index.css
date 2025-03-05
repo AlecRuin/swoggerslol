@@ -13,6 +13,7 @@ html{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 /* #endregion */
@@ -23,7 +24,7 @@ html{
   --tertiary:rgb(213,102,250);/*Hot pink/purple*/
   --quaternary:rgb(102,250,208);/*teal ish*/
   
-  --darker-primary:color-mix(in srgb,var(--primary) 2.5%,black);
+  --darker-primary:color-mix(in srgb,var(--primary) 50%,rgb(0,3,9));
   --darker-tertiary:color-mix(in srgb,var(--tertiary) 31.5%,black);
 
   --lighter-primary:color-mix(in srgb,var(--primary) 97%,rgb(102, 153, 255));
@@ -33,20 +34,17 @@ html{
   --lightest-primary:color-mix(in srgb,var(--primary) 80%,rgb(102, 153, 255));
 
   --lightest-secondary:color-mix(in srgb, var(--secondary) 25%,white);
-
-  font-size: 17.5px;
-}
-.fs-normal{
-  font-size: clamp(0.50rem,2vw,0.65rem);
+  --global-font-size: 17.5px;
+  font-size: clamp(0.50rem,2vw,1rem)
 }
 .fs-large{
-  font-size: clamp(0.85rem,3vw,1rem);
+  font-size: clamp(0.85rem,3vw,1.5rem);
 }
 .fs-larger{
   font-size: clamp(1.25rem,4vw,2.5rem);
 }
 .fs-largest{
-  font-size: clamp(6rem,5vw,7rem);
+  font-size: clamp(2rem,5vw,2.5rem);
 }
 .txt-grad-r-rgb1-rgb2{
   background: linear-gradient(to right,var(--rgb1) 0%,var(--rgb2) 100%);
@@ -76,6 +74,37 @@ html{
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+.txt-grad-primary{
+  background: linear-gradient(to left,var(--primary) 0%,var(--lighter-primary) 50%,var(--primary) 100%);
+  font-weight: 800;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.txt-grad-secondary{
+  background: linear-gradient(to left,var(--secondary) 0%,var(--lighter-secondary) 50%,var(--secondary) 100%);
+  font-weight: 800;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.txt-grad-tertiary{
+  background: linear-gradient(to left,var(--tertiary) 0%,var(--lighter-tertiary) 50%,var(--tertiary) 100%);
+  font-weight: 800;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.txt-grad-quaternary{
+  background: linear-gradient(to left,var(--quaternary) 0%,var(--lighter-quaternary) 50%,var(--quaternary) 100%);
+  font-weight: 800;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
 .shimmer{
   animation: shimmer 3.0s linear infinite;
   background-size: 200% 100%;
@@ -87,6 +116,10 @@ html{
   100% {
       background-position: 200% 0%;
   }
+}
+
+.bg-primary{
+  background-color: var(--primary);    
 }
 
 /*#region Commons*/
@@ -195,6 +228,9 @@ html{
 .jc-center{
   justify-content: center;
 }
+.ai-center{
+  align-items: center;
+}
 /*#endregion*/
 
 /*#region Margins*/
@@ -211,6 +247,10 @@ html{
 }
 .m-mx-my{
   margin: var(--my),var(--mx);
+}
+.m-x-a{
+  margin-left: auto;
+  margin-right: auto;
 }
 .m-x-100{
   margin-left: 100%;
@@ -252,11 +292,18 @@ html{
   margin-left: 10%;
   margin-right: 10%;
 }
+.m-x-5{
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .m-x-0{
   margin-left: 0%;
   margin-right: 0%;
 }
-
+.m-x-1{
+  margin-left: 1%;
+  margin-right: 1%;
+}
 .m-y-100{
   margin-top: 100%;
   margin-bottom: 100%;
@@ -297,11 +344,18 @@ html{
   margin-top: 10%;
   margin-bottom: 10%;
 }
+.m-y-5{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.m-y-1{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
 .m-y-0{
   margin-top: 0%;
   margin-bottom: 0%;
 }
-
 .m-100{
   margin: 100%;
 }
@@ -450,10 +504,16 @@ html{
 .strikethrough{
   text-decoration: line-through;
 }
+.bold{
+  font-weight: bold;
+}
 .text-center{
   text-align: center;
 }
 .no-decor{
   text-decoration: none;
+}
+.overflow-hidden{
+  overflow:hidden;
 }
 /*#endregion*/

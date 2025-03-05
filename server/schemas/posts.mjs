@@ -4,7 +4,8 @@ const POSTS_SCHEMA = new mongoose.Schema({
     //The preview image WILL be MODNAME
     post_title:{type:String,required:true},
     preview_text:String,
-    bIsActiveProject:Boolean,
+    is_active_project:Boolean,
+    download_url_override:String,
     entry:[
         {
             entry_title:{type:String,required:true},

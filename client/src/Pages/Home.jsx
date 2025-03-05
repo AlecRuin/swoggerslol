@@ -1,9 +1,9 @@
-// import reactLogo from '../assets/react.svg'
-// import viteLogo from '/vite.svg'
 import { useQuery } from '@apollo/client';
 import { useState,useEffect } from 'react'
 import { GetAllPosts, hello } from '../utils/api/queries.mjs';
-import Post from './Post';
+import {Preview} from "../pages/index.mjs";
+import {Carousel,Announcements} from "../features/index.mjs"
+import "./Home.css"
 export default function Home({set_nav_data}){
     //useEffect for when component mounts
     //useState for storing fetched data
@@ -13,32 +13,30 @@ export default function Home({set_nav_data}){
         useEffect(()=>{
             if(data){
                 setPosts(data.GetAllPosts)
-                set_nav_data(data.GetAllPosts.map(post=>post.post_title))
+                set_nav_data(data.GetAllPosts.filter(ele=>!ele.is_active_project).map(post=>post.post_title))
             }
         },[data])
         if(loading)return (
-            <>
-                <Post data={posts}></Post>
-            </>
+            <Preview data={posts}/>
         )
         if(error)throw error;
-        console.log("data: ",data);
+        console.log("HOME Data: ",data);
         return(
             <>
+                <Carousel/>
+                <Announcements data={posts.filter(ele=>ele.is_active_project)}/>
                 <div>
-                    Carousel
+                    <h3 className="highlight-text-style text-center fs-larger m-my">PROJECTS
+                        <div className="underline"></div>
+                    </h3>
                 </div>
-                <div>
-                    announcements
-                </div>
-                <div>
-                    PROJECTS
-                </div>
-                    post title {
-                        posts.map(post=>{
-                            return(<Post key={post._id} data={post}/>)
+                <div className="flex w-100 flex-column ai-center">
+                    {
+                        posts.filter(ele=>!ele.is_active_project).map((post,index)=>{
+                            return(<Preview key={post._id} data={post} index={index}/>)
                         })
                     }
+                </div>
             </> 
         )
     } catch (error) {

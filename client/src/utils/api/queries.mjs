@@ -10,6 +10,7 @@ query GetAllPosts {
         _id
         post_title
         preview_text
+        is_active_project
     }
   } 
 `

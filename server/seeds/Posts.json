@@ -1,7 +1,242 @@
 [
     {
+        "post_title":"DMC5 Nero as Aatrox",
+        "preview_text":"Theres a lot of missing animations and VFX that need to be finished",
+        "is_active_project":true
+    },
+    {
+        "post_title":"League May Audio 5",
+        "preview_text":"The buggiest POS I've ever made...but when it works, its game changing",
+        "is_active_project":true
+    },
+    {
         "post_title":"DMC5 Vergil as Yasuo",
         "preview_text":"The Legendary Son of Sparda from DMC5 playing as Drunk Homeless Man from League of Legends",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Doppelganger as Yasuo",
+        "preview_text":"The Doppelganger clone as Yasuo. Works well with Vergil as Yone",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Nero as Blitzcrank",
+        "preview_text":"The deadweight himself as my feeding support! I had daydreams of Nero being Blitzcrank, and I finally got around to making it",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Dante as Samira",
+        "preview_text":"The <i>other</i> Legendary Son of Sparda from DCM5 playing as Dante-wannabe from League of Legends",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Dante as Riven",
+        "preview_text":"This skin replaces Riven from League of Legends to Dante from DMC5. This mod was originally made for a friend, and as suck, gets to have a custom message written onto the loading screen image.",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 V as Hwei",
+        "preview_text":"My gf asked for this skin for MONTHS. And when I <i>finally</i> get around to making it, she still uses the winterblessed skin. 😭",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Vergil as Yone",
+        "preview_text":"Replaces Yone as DMC5 Vergil. Works really well with DMC5 Doppelganger as Yasuo. (I do not condone the behavior of windshitters bot. Lose LP at your own discretion)",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Griffon as Smolder",
+        "preview_text":"I REALLY hated listening to Annoying Disney Character (ADC)(Smolder) speak. So I rushed this mod as quick as possible. Works really well with DMC5 V as Hwei. ",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"Full Build Gwen",
+        "preview_text":"Gwen but shes in permanent doll mode. Extremely adorable and demoralizing to lose against",
+        "download_url_override":"https://discord.gg/GA4fsA8xxK",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC4 Berial as Hecarim",
+        "preview_text":"This skin mod replaces Hecarim from League of Legends with Berial from DMC4. This mod was requested and dedicated for Pinhetro",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"JJK Gojo as Mordekaiser",
+        "preview_text":"The strongest jujutsu sorcerer is now the ruler of the Death Realm in Runeterra",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DMC5 Nobody as Skarner",
+        "preview_text":"This skin mod replaces Skarner from League of Legends with Nobody from DMC5. This mod was requested and dedicated for Cuestionmark",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"Sai as Hwei",
+        "preview_text":"The paint ninja from Naruto as the paint boy from League of Legends",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"DB Goku as Sett",
+        "preview_text":"This skin mod replaces Sett from League of Legends with Goku from Dragon Ball. This mod was requested and dedicated for UltraXEgo",
+        "entry":[
+            {
+                "entry_title":"Demonstration",
+                "entry_body":"<video>"
+            }
+        ],
+        "version_history":[
+            {
+                "version_number":"1.0.0.0",
+                "patch_note":"epic swag poggers time"
+            }
+        ]
+    },
+    {
+        "post_title":"JJK Todo as Sett",
+        "preview_text":"The Prince of Boogie Woogie is tearing up the Rift with my highest quality weighted model yet!",
         "entry":[
             {
                 "entry_title":"Demonstration",

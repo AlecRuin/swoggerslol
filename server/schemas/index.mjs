@@ -1,2 +1,3 @@
 import { POSTS } from "./posts.mjs";
-export {POSTS}
+import { SHOWCASES } from "./showcases.mjs";
+export {POSTS,SHOWCASES}

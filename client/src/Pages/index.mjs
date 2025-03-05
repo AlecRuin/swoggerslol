@@ -1,3 +1,4 @@
-import Home from "./Home";
-import About from "./About"
-export {Home,About}
+import Home from "./Home"
+import Preview from "./Preview"
+import Post from "./Post"
+export {Home,Preview,Post}

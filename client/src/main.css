@@ -1,3 +1,7 @@
+html{
+    background-image: url("/images/signature.webp");
+    background-size: 60px;
+}
 .basic-text-style{
     font-weight: 700;
     color: var(--lightest-secondary);

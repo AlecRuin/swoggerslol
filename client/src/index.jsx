@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 // import {Link} from "react-router"
 import './main.css'
 import "./index.css"
-import {Home} from "./pages/index.mjs"
+import {Home,Post} from "./pages/index.mjs"
 // import Navigation from './Feature/Navigation'
 import { useState } from "react"
 // import Banner from "./Feature/Banner"
@@ -25,6 +25,7 @@ export default function Index(){
                             <div className="h-a w-90 flex flex-column">
                                 <Routes>
                                     <Route path='/' element={<Home set_nav_data={set_nav_data}/>}/>
+                                    <Route path="posts/:post_name" element={<Post set_nav_data={set_nav_data}/>}/>
                                 </Routes>
                             </div>
                         <Banner/>
