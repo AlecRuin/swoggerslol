@@ -56,10 +56,8 @@ const videonamesarr=[
 ]
 
 const CarouselItem = forwardRef((props,ref)=>{
-    if(!props.videos)return(<div>Loading...</div>)
+    if(!props.videos)return(<div>Loading...</div>);
     const [selectedVid,setSelectedVid] = useState(Math.floor(Math.random()*props.videos.length))
-    console.log("Props: ",props.videos);
-    
     return(
         <a ref={ref} className="carousel-item w-25 h-a no-decor" target="_blank" href={props.videos[selectedVid].youtube_link}>
             <video className="image-stretch w-100 carousel-video" autoPlay muted>
@@ -78,6 +76,7 @@ export default function Carousel(){
     const [isPlaying,setPlaying] = useState(false)
     const {loading,errror,data} = useQuery(GetAllShowcases)
     const [videos,setVideos] = useState(null)
+    const [refsReady,setRefsReady]=useState(false)
     let currentIndex=0;
     function showNextItem(){
         if(itemsRef.current.length<1||itemsRef.current[0]==null)return;
@@ -90,14 +89,17 @@ export default function Carousel(){
         items[(currentIndex+1)%items.length].classList.add("previous")
         items[(currentIndex+1)%items.length].classList.remove("active","next")
     }
+    useEffect(()=>{
+        if(data&&data.GetAllShowcases.length>0)setVideos(data.GetAllShowcases);
+    },[data])
     useEffect(() => {
         const items=itemsRef.current
         if(items.length<1)return;
         const changeVideo=(ele)=>{
-            var chosenVid = Math.floor(Math.random()*videosarray.length)
-            ele.href = videotoyoutubearr[chosenVid]
-            ele.querySelector(".source").src =videosarray[chosenVid]
-            ele.querySelector(".video-caption").innerText = videonamesarr[chosenVid]
+            var chosenVid = Math.floor(Math.random()*videos.length)
+            ele.href = videos[chosenVid].youtube_link
+            ele.querySelector(".source").src ="/videos/"+videos[chosenVid].video_title.replace(/\s+/g,"-")+".webm"
+            ele.querySelector(".video-caption").innerText = videos[chosenVid].video_title
             ele.querySelector(".carousel-video").load()
         }
         const addEventListeners = () => {
@@ -121,16 +123,11 @@ export default function Carousel(){
         setPlaying(true)
         addEventListeners()
         return removeEventListeners;
-    }, [itemsRef]); 
+    }, [refsReady]); 
     useInterval(()=>{
         showNextItem()
     },isPlaying?6000:null)
-    useEffect(()=>{
-        if(data&&data.GetAllShowcases.length>0)setVideos(data.GetAllShowcases);
-    },[data])
-
     if(loading) return(<div>Loading...</div>);
-    if(data&&data.GetAllShowcases)console.log("data: ",data.GetAllShowcases);
     return (
         <div className="basic-text-style w-100 carousel">
         {
@@ -138,7 +135,10 @@ export default function Carousel(){
             <CarouselItem
                 key={index}
                 videos={videos}
-                ref={(el)=>itemsRef.current[index]=el}
+                ref={(el)=>{
+                    itemsRef.current[index]=el
+                    if(index===2)setRefsReady(true)
+                }}
             />)
             )
         }
