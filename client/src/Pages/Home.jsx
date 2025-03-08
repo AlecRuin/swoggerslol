@@ -4,6 +4,14 @@ import { GetAllPosts, hello } from '../utils/api/queries.mjs';
 import {Preview} from "../pages/index.mjs";
 import {Carousel,Announcements} from "../features/index.mjs"
 import "./Home.css"
+
+const chunkArray = (array, size) => {
+    return array.reduce((acc, _, i) => {
+      if (i % size === 0) acc.push(array.slice(i, i + size));
+      return acc;
+    }, []);
+};
+
 export default function Home({set_nav_data}){
     //useEffect for when component mounts
     //useState for storing fetched data
@@ -14,6 +22,7 @@ export default function Home({set_nav_data}){
             if(data){
                 setPosts(data.GetAllPosts)
                 set_nav_data(data.GetAllPosts.filter(ele=>!ele.is_active_project).map(post=>post.post_title))
+                console.log("chunky array: ",chunkArray(data.GetAllPosts,2));
             }
         },[data])
         if(loading)return (
@@ -29,11 +38,24 @@ export default function Home({set_nav_data}){
                         <div className="underline"></div>
                     </h3>
                 </div>
-                <div className="flex w-100 flex-column ai-center">
-                    {
+                <div className="flex w-100 ai-center flex-wrap">
+                    {/* {
                         posts.filter(ele=>!ele.is_active_project).map((post,index)=>{
-                            return(<Preview key={post._id} data={post} index={index}/>)
+                            return(
+                                    <Preview key={post._id} data={post} index={index}/>
+                            )
                         })
+                    } */}
+                    {
+                        chunkArray(posts.filter(ele=>!ele.is_active_project),2).map((pair,index)=>(
+                            <div className='w-100 flex' key={index}>
+                                {
+                                    pair.map((item,idx)=>(
+                                        <Preview key={item._id} data={item} index={index+idx}/>
+                                    ))
+                                }
+                            </div>
+                        ))
                     }
                 </div>
             </> 
