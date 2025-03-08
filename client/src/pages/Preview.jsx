@@ -12,7 +12,7 @@ export default function Preview({data,index}){
         const flipped = (index+1)%2==1
         const post_title_hyphen = data.post_title.replace(/\s+/g,"-")
         return(
-            <section style={{marginTop:"5%"}} className="w-80 preview "  id={post_title_hyphen}>
+            <section style={{marginBottom:"2%"}} className="w-70 preview "  id={post_title_hyphen}>
                 <div style={{float:`${flipped?"left":"right"}`,aspectRatio:"14/4"}} className={`preview-nugget bg-primary black-border`}>
                     <div style={{flexDirection:`${flipped?"row-reverse":"row"}`}} className="flex h-100 w-100 jc-space-between">
                         <Link to={"/posts/"+post_title_hyphen}>

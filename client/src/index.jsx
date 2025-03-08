@@ -1,13 +1,23 @@
-import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
+import {BrowserRouter as Router,Route,Routes, useLocation} from "react-router-dom"
 import { Link } from "react-router-dom"
 // import {Link} from "react-router"
 import './main.css'
 import "./index.css"
 import {Home,Post} from "./pages/index.mjs"
 // import Navigation from './Feature/Navigation'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 // import Banner from "./Feature/Banner"
 import {Banner,Navigation} from "./features/index"
+
+const ScrollToTop=()=>{
+    const {pathname} = useLocation();
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[pathname])
+    return null
+}
+
+
 export default function Index(){
     try {
         const [nav_data,set_nav_data] = useState([])
@@ -15,6 +25,7 @@ export default function Index(){
             <>
             <Navigation data={nav_data}/>
                 <Router>
+                    <ScrollToTop/>
                     <Link to={"/"} className="no-decor hero-title">
                         <h1 className="m-a text-center basic-text-style fs-larger">Katlec Valentine's Mods</h1>
                         <div className="underline"></div>

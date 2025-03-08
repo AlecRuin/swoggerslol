@@ -1,4 +1,4 @@
-import {POSTS,SHOWCASES} from "../schemas/index.mjs"
+import {POSTS} from "../schemas/index.mjs"
 import { Log } from "../utils/logging.mjs";
 export const resolvers ={
     Query:{
@@ -10,14 +10,6 @@ export const resolvers ={
         GetAllPosts:async()=>{
             try {
                 return await POSTS.find()
-            } catch (error) {
-                Log(new Error(),error)
-                return error
-            }
-        },
-        GetAllShowcases:async()=>{
-            try {
-                return await SHOWCASES.find()
             } catch (error) {
                 Log(new Error(),error)
                 return error

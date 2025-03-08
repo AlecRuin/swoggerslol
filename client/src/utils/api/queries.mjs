@@ -14,11 +14,3 @@ query GetAllPosts {
     }
   } 
 `
-export const GetAllShowcases=gql`
-query GetAllShowcases{
-  GetAllShowcases {
-    youtube_link
-    video_title
-  }
-}
-`

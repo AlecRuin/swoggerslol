@@ -1,9 +1,7 @@
 export default function Announcements({data}){
-    console.log("Announcements Data: ",data);
-    
     return(
         <div className="m-mx-my h-a jc-center flex">
-            <div className="w-100 bg-primary black-border h-a preview-nugget overflow-hidden">
+            <div className="w-100 bg-primary black-border h-a announcement-nugget overflow-hidden">
 
                 <h3 className="basic-text-style text-center fs-large m-y-1">ACTIVE PROJECT</h3>
                 <div className="underline m-y-1"></div>

@@ -20,7 +20,6 @@ export default function Home({set_nav_data}){
             <Preview data={posts}/>
         )
         if(error)throw error;
-        console.log("HOME Data: ",data);
         return(
             <>
                 <Carousel/>
