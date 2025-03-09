@@ -18,7 +18,4 @@ export default function ApplyMiddleware(APP,APOLLO,__DIRNAME){
 
     APP.use("/graphql",expressMiddleware(APOLLO))
     APP.use(express.static(join(__DIRNAME,"../client/dist")))
-    APP.get("*", (req, res) => {
-        res.sendFile(join(__DIRNAME, "../client/dist", "index.html"));
-    });
 }

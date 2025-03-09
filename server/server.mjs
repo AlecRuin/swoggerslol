@@ -43,6 +43,9 @@ async function AttemptConnections(){
         ApplyMiddleware(APP,APOLLO,__DIRNAME)
         //connect routes
         APP.use(ROUTES)
+        APP.get("*", (req, res) => {
+            res.sendFile(join(__DIRNAME, "../client/dist", "index.html"));
+        });
         //connect express
         APP.listen(PORT,()=>Log(new Error(),`Connection to Express established on http://localhost:${PORT}`))
     } catch (error) {

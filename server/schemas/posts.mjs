@@ -9,7 +9,8 @@ const POSTS_SCHEMA = new mongoose.Schema({
     entry:[
         {
             entry_title:{type:String,required:true},
-            entry_body:{type:String,require:true},
+            entry_body:{type:String,required:true},
+            is_underlined:Boolean,
             _id:false
         }
     ],

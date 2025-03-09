@@ -1,7 +1,8 @@
 export const typeDefs=`#graphql
 type entries{
     entry_title:String
-    entry_body:String
+    entry_body:String,
+    is_underlined:Boolean
 }
 type version_histories{
     version_number:String
@@ -18,6 +19,6 @@ type Post{
 type Query{
     hello: String
     GetAllPosts:[Post]
-    GetPostByID(ID:ID!):Post
+    GetPostByPostName(PostName:String!):Post
 }
 `

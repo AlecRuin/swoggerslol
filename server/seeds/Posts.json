@@ -15,6 +15,11 @@
         "entry":[
             {
                 "entry_title":"Demonstration",
+                "entry_body":"<video controls class='basic-video-style m-a text-center w-50'><source src='/videos/large/DMC5-Vergil-as-Yasuo.webm' type='video/webm'></video>",
+                "is_underlined":true
+            },
+            {
+                "entry_title":"2.0 Update is LIVE!",
                 "entry_body":"<video>"
             }
         ],

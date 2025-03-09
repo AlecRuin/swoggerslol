@@ -14,3 +14,19 @@ query GetAllPosts {
     }
   } 
 `
+export const GetPostByPostName = gql`
+query GetPostByPostName($PostName: String!) {
+    GetPostByPostName(PostName: $PostName) {
+      _id
+      entry {
+        entry_body
+        entry_title
+        is_underlined
+      }
+      post_title
+      version_history {
+        patch_note
+        version_number
+      }
+    }
+}`

@@ -15,9 +15,9 @@ export const resolvers ={
                 return error
             }
         },
-        GetPostByID:async(parent,{ID})=>{
+        GetPostByPostName:async(parent,{PostName})=>{
             try {
-                return await POSTS.findById(ID)
+                return await POSTS.findOne({post_title:PostName})
             } catch (error) {
                 Log(new Error(),error)
                 return error
