@@ -18,7 +18,7 @@ export default function Preview({data,index}){
                         <Link to={"/posts/"+post_title_hyphen}>
                             <img className="h-100 preview-image" src={"/images/mods/"+post_title_hyphen+".webp"}/>
                         </Link>
-                        <div className="flex flex-column w-60 m-x-5">
+                        <div className="flex flex-column w-60 m-x-5 details-nugget">
                             <Link to={"/posts/"+post_title_hyphen} className="txt-grad-secondary shimmer m-x-a fs-large m-y-1">
                                 {data.post_title}
                             </Link>

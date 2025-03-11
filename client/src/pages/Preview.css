@@ -25,3 +25,11 @@
 .preview{
     min-height: 250px;
 }
+@media (max-width:75em) {
+    .preview-nugget img{
+        display: none;
+    }
+    .details-nugget{
+        width: 100%;
+    }
+}
