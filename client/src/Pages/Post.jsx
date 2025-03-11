@@ -13,7 +13,7 @@ const ModSection = (props,refs)=>{
         sectionRef.current.innerHTML=props.data.entry_body
     },[])
     return(
-        <section className="w-100 flex" ref={sectionRef} id={props.data.entry_title.replace(/\s+/g,"-")} >
+        <section className="w-100 flex flex-column" ref={sectionRef} id={props.data.entry_title.replace(/\s+/g,"-")} >
 
         </section>
     )
@@ -26,7 +26,7 @@ export default function Post({set_nav_data}){
     })
     useEffect(()=>{
         if(!data||!data.GetPostByPostName)return;
-        set_nav_data(data.GetPostByPostName.entry.map((ele)=>ele.entry_title))
+        set_nav_data([...data.GetPostByPostName.entry.map((ele)=>ele.entry_title),"Version","Download"])
     },[data])
     if(loading)return(<div>loading...</div>);
     console.log("data: ",data.GetPostByPostName.entry[0]);
@@ -45,6 +45,50 @@ export default function Post({set_nav_data}){
                     </>
                 ))
             }
+            {/* Versioning */}
+            <section className="w-100 flex flex-column m-y-3" id="Version">
+                <h3 className='fs-large text-center highlight-text-style m-y-0'>
+                    Version
+                </h3>
+                <div className="simple-underline"></div>
+                <table className="w-50 m-x-a m-y-1">
+                    <tr>
+                        <th>Version number</th>
+                        <th>Patch notes</th>
+                    </tr>
+                    {
+                        data.GetPostByPostName.version_history.map((element)=>(
+                            <tr>
+                                <td>{element.version_number}</td>
+                                <td>{element.patch_note}</td>
+                            </tr>
+                        ))
+                    }
+                </table>
+                <p className="text-center">
+                    My version standard is as follows:<br/>&lt;MAJOR UPDATE NUM&gt;.&lt;MINOR UPDATE NUM&gt;.&lt;LEAGUE VERSION&gt;.&lt;LEAGUE VERSION&gt;<br/>
+                    IE, version 1.8.13.14 = 1 major update, 8 minor updates, last tested on 13.14.
+                </p>
+            </section>
+            <div style={{boxShadow:"0px 0px 12px 2px rgba(108,250,208, 0.74)"}} className="quaternary-underline quaternary-glowbox"></div>
+            {/* Downloads */}
+            <section id="Download" className="flex jc-sb w-90 m-y-5">
+                <a className="basic-button m-a no-decor" target="_blank" href="https://discordapp.com/users/357527176020754432">
+                    <div className="txt-grad-tertiary shimmer fs-large">
+                        Message me on Discord
+                    </div>
+                </a>
+                <a className="basic-button m-auto no-decor" target="_blank" href={(data.GetPostByPostName.download_url_override)?data.GetPostByPostName.download_url_override:`https://github.com/AlecRuin/${data.GetPostByPostName.post_title.replace(/\s+/g,"-")}/releases/latest`}>
+                    <div className="txt-grad-secondary shimmer fs-larger">
+                        Download
+                    </div>
+                </a>
+                <a className="basic-button m-a no-decor" target="_blank" href="https://discord.gg/p9bR7hc57r">
+                    <div className="txt-grad-tertiary shimmer fs-large text-center m-auto">
+                        Join my Discord server
+                    </div>
+                </a>
+            </section>
         </div>
     )
 }

@@ -15,7 +15,12 @@ html{
   min-height: 100vh;
   scroll-behavior: smooth;
 }
-
+table, table th, table td {
+  border-collapse: collapse;
+  border: 1px solid rgb(34,44,63) !important;
+  border-collapse: collapse;
+  text-align: center;
+}
 /* #endregion */
 
 :root{
@@ -347,6 +352,10 @@ html{
 .m-y-5{
   margin-top: 5%;
   margin-bottom: 5%;
+}
+.m-y-3{
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 .m-y-1{
   margin-top: 1%;

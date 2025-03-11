@@ -9,10 +9,10 @@ const indexFilePath = join(__DIRNAME,"../client/dist", "index.html")
 console.log(indexFilePath);
 
 const cachedHTML = readFileSync(indexFilePath,"utf8")
-ROUTES.get("/:post_title",async(req,res)=>{
+ROUTES.get("/posts/:post_title",async(req,res)=>{
     try {
         const {post_title} = req.params
-        const post = await POSTS.findOne({post_title:post_title})
+        const post = await POSTS.findOne({post_title:post_title.replace(/-/g," ")})
         if(!post)return res.status(404).send("Post not found");
         const html = cachedHTML.replace("<head>",
             `<head>
@@ -22,6 +22,7 @@ ROUTES.get("/:post_title",async(req,res)=>{
             <meta property="og:url" content="https://www.swoggerslol.com/posts/${post_title}"
             `
         )
+        res.send(html)
     } catch (error) {
         return res.status(500).send(error)
     }

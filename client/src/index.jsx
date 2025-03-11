@@ -29,11 +29,11 @@ export default function Index(){
                     <Link to={"/"} className="no-decor hero-title">
                         <h1 className="m-a text-center basic-text-style fs-larger">Katlec Valentine's Mods</h1>
                         <div className="underline"></div>
-                        <h4 className="m-a text-center basic-text-style fs-large">aka Swoggers</h4>
+                        <h4 style={{marginBottom:"1vh"}} className="m-a text-center basic-text-style fs-large">aka Swoggers</h4>
                     </Link>
-                    <div className="flex h-a">
+                    <div className="flex h-a jc-space-between">
                         <Banner/>
-                            <div className="h-a w-90 flex flex-column">
+                            <div className="h-a flex flex-column">
                                 <Routes>
                                     <Route path='/' element={<Home set_nav_data={set_nav_data}/>}/>
                                     <Route path="posts/:post_name" element={<Post set_nav_data={set_nav_data}/>}/>
