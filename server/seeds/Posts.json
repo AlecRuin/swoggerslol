@@ -25,11 +25,11 @@
             },
             {
                 "entry_title":"Mod info",
-                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod info</h3><div class='simple-underline'></div><p class='fs-small text-center w-50 m-x-a'>For BASE SKIN Yasuo only. Will not work with other skins!</p>"
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod info</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>For BASE SKIN Yasuo only. Will not work with other skins!</p>"
             },
             {
                 "entry_title":"Description",
-                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Description</h3><div class='simple-underline'></div><p class='fs-small text-center w-50 m-x-a'>For when you're literally the story that is approaching. I PROMISE you, you'll be a better Yasuo player with this mod. IDK why. </p>",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Description</h3><div class='simple-underline'></div><p class=' text-center w-50 m-x-a'>For when you're literally the story that is approaching. I PROMISE you, you'll be a better Yasuo player with this mod. IDK why. </p>",
                 "is_underlined":true
             },
             {
@@ -46,7 +46,7 @@
             },
             {
                 "entry_title":"Mod rank",
-                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod rank</h3><div class='simple-underline'></div><div class='popup fs-small'></div><table style='border: 1px solid grey;' class='text-center w-90 m-x-a m-y-1'><tr class='fs-small' style='text-wrap: wrap;'><th class='hide'>You went out of your way to look at my mod(s), and I couldn't be more grateful to you.</th><th  >What are weights???</th><th  >The model was given rough-weights</th><th  >The model has 0.5 weights on major joints, like arms and legs</th><th>The model was 100% weighted by me</th><th  >This uses weights from the original source model</th></tr><tr  style='text-wrap: wrap;'><th class='w-25 fs-small'>Model/Weighting</th><td></td><td></td><td></td><td class='fs-large'>X</td><td></td></tr><tr class='fs-small' style='text-wrap: wrap;'><th class='hide'>I make these mods for you all, and I am fueled by the wonderful praise I received from each of you.</th><th  >I made them 😭</th><th>Riot Games™ made them 😔</th><th  >Some animations were replaced utilizing various techniques</th><th  >Animations were created by source animations mirroring to the rig</th><th  >Animations were imported by the source</th></tr><tr><th class='w-25 fs-small'>Animations</th><td></td><td></td><td></td><td colspan='2' class='fs-large ' >X</td></tr><tr class='fs-small' style='text-wrap: wrap;'><th class='hide'>With each praise, I go back and make my mods better. You keep my mods alive and well, my life's work.</th><th  >I made them 😭</th><th>Untouched</th><th>Some voice lines were changed</th><th  >All the voice lines were changed</th><th>Both voice lines and SFX were changed</th></tr><tr><th class='w-25 fs-small'>SFX and voice lines</th><td></td><td></td><td></td><td></td><td class='fs-large' >X</td></tr><tr class='fs-small'><th class='hide'>Because of you are who you are, I can keep going. And I hope to see you again.</th><th colspan='2'>I made them 😭</th><th>Untouched</th><th colspan='2'  >Created by a professional</th></tr><tr><th class='w-25 fs-small'>Ability Icons</th><td colspan='2'></td><td class='fs-large'>X</td><td colspan='2'></td></tr><tr class='fs-small'><th class='hide text-left'> You are priceless to me. <i><br>With love,<br>Valentine</i></th><th  >Untouched</th><th  >Color-shifted</th><th  >Adjusted/Trimmed/Tweaked</th><th colspan='2'  >Custom VFX</th></tr><tr><th class='w-25 fs-small'>VFX/Particles</th><td></td><td ></td><td></td><td colspan='2' class='fs-large'>X</td></tr></table><div style='margin-bottom:5%' class='flex jc-center flex-column ai-center'><div class='text-center'>This mod is considered:</div><img class='w-20 m-x-a text-center' src='/images/SS.png'/></div>",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod rank</h3><div class='simple-underline'></div><div class='popup '></div><table style='border: 1px solid grey;' class='text-center w-90 m-x-a m-y-1'><tr class='' style='text-wrap: wrap;'><th class='hide'>You went out of your way to look at my mod(s), and I couldn't be more grateful to you.</th><th  >What are weights???</th><th  >The model was given rough-weights</th><th  >The model has 0.5 weights on major joints, like arms and legs</th><th>The model was 100% weighted by me</th><th  >This uses weights from the original source model</th></tr><tr  style='text-wrap: wrap;'><th class='w-25 '>Model/Weighting</th><td></td><td></td><td></td><td class='fs-large'>X</td><td></td></tr><tr class='' style='text-wrap: wrap;'><th class='hide'>I make these mods for you all, and I am fueled by the wonderful praise I received from each of you.</th><th  >I made them 😭</th><th>Riot Games™ made them 😔</th><th  >Some animations were replaced utilizing various techniques</th><th  >Animations were created by source animations mirroring to the rig</th><th  >Animations were imported by the source</th></tr><tr><th class='w-25 '>Animations</th><td></td><td></td><td></td><td colspan='2' class='fs-large ' >X</td></tr><tr class='' style='text-wrap: wrap;'><th class='hide'>With each praise, I go back and make my mods better. You keep my mods alive and well, my life's work.</th><th  >I made them 😭</th><th>Untouched</th><th>Some voice lines were changed</th><th  >All the voice lines were changed</th><th>Both voice lines and SFX were changed</th></tr><tr><th class='w-25 '>SFX and voice lines</th><td></td><td></td><td></td><td></td><td class='fs-large' >X</td></tr><tr class=''><th class='hide'>Because of you are who you are, I can keep going. And I hope to see you again.</th><th colspan='2'>I made them 😭</th><th>Untouched</th><th colspan='2'  >Created by a professional</th></tr><tr><th class='w-25 '>Ability Icons</th><td colspan='2'></td><td class='fs-large'>X</td><td colspan='2'></td></tr><tr class=''><th class='hide text-left'> You are priceless to me. <i><br>With love,<br>Valentine</i></th><th  >Untouched</th><th  >Color-shifted</th><th  >Adjusted/Trimmed/Tweaked</th><th colspan='2'  >Custom VFX</th></tr><tr><th class='w-25 '>VFX/Particles</th><td></td><td ></td><td></td><td colspan='2' class='fs-large'>X</td></tr></table><div style='margin-bottom:5%' class='flex jc-center flex-column ai-center'><div class='text-center'>This mod is considered:</div><img class='w-20 m-x-a text-center' src='/images/SS.png'/></div>",
                 "is_underlined":true
             }
         ],
@@ -96,16 +96,60 @@
     {
         "post_title":"DMC5 Doppelganger as Yasuo",
         "preview_text":"The Doppelganger clone as Yasuo. Works well with Vergil as Yone",
+        "download_url_override":"https://github.com/AlecRuin/DMC5-Vergil-as-Yasuo/releases/latest",
         "entry":[
             {
                 "entry_title":"Demonstration",
-                "entry_body":"<video controls class='basic-video-style'><source src='/videos/DMC5 Doppelganger as Yasuo showcase.mp4' type='video/webm'></video>"
+                "entry_body":"<video controls class='basic-video-style w-50 m-y-5 m-x-a'><source src='/videos/DMC5-Doppelganger-as-Yasuo.webm' type='video/webm'></video>",
+                "is_underlined":true
+            },
+            {
+                "entry_title":"Mod info",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod info</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>For BASE SKIN Yasuo only. Will not work with other skins!</p>"
+            },
+            {
+                "entry_title":"Description",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Description</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>I made this skin because I wanted an excuse to play windshitters bot. And if Yone is already Vergil, I will simply source a different Vergil. </p>",
+                "is_underlined":true
+            },
+            {
+                "entry_title":"Credits",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Credits</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>The assets were sourced by CAPCOM's DMC5 video game! All rights go to their respective owners. I do not claim to own any of the work/assets used by the mod. I do claim ownership of the <i>effort</i> put behind the formation of the mod itself.</p>"
+            },
+            {
+                "entry_title":"Bugs",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Bugs</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>He looks low-key kinda fugly</p>"
+            },
+            {
+                "entry_title":"How to contribute",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>How to contribute</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>ALL OF MY MODS ARE FREE TO MODIFY IN EXCHANGE FOR CREDIT! Send me a DM and I'll give you whatever file you need to get started, including the link to the repo! Just please, credit me, and all parties that deserve credit! I LOVE CLOUT. RAAAAAAAAAHHHH</p>"
+            },
+            {
+                "entry_title":"Mod rank",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod rank</h3><div class='simple-underline'></div><div class='popup '></div><table class='text-center w-90 jc-center m-x-a m-y-1'><tr class='' style='text-wrap: wrap;'><th class='hide'>You went out of your way to look at my mod(s), and I couldn't be more grateful to you.</th><th >What are weights???</th><th >The model was given rough-weights</th><th >The model has 0.5 weights on major joints, like arms and legs</th><th >The model was 100% weighted by me</th><th >This uses weights from the original source model</th></tr><tr  style='text-wrap: wrap;'><th class='w-25 '>Model/Weighting</th><td></td><td></td><td></td><td class='afs-large'>X</td><td></td></tr><tr class='' style='text-wrap: wrap;'><th class='hide'>I make these mods for you all, and I am fueled by the wonderful praise I received from each of you.</th><th >I made them 😭</th><th >Riot Games™ made them 😔</th><th >Some animations were replaced utilizing various techniques</th><th >Animations were created by source animations mirroring to the rig</th><th >Animations were imported by the source</th></tr><tr><th class='w-25 '>Animations</th><td></td><td></td><td></td><td class='afs-large hover-container' >X</td><td></td></tr><tr class=''  style='text-wrap: wrap;'><th class='hide'>With each praise, I go back and make my mods better. You keep my mods alive and well, my life's work.</th><th >I made them 😭</th><th >Untouched</th><th >Some voice lines were changed</th><th >All the voice lines were changed</th><th >Both voice lines and SFX were changed</th></tr><tr><th class='w-25 '>SFX and voice lines</th><td></td><td >X</td><td></td><td></td><td class='afs-large hover-container' >X</td></tr><tr class=''><th class='hide'>Because of you are who you are, I can keep going. And I hope to see you again.</th><th colspan='2' >I made them 😭</th><th >Untouched</th><th colspan='2' >Created by a professional</th></tr><tr><th class='w-25 '>Ability Icons</th><td colspan='2'></td><td class='afs-large'>X</td><td colspan='2'></td></tr><tr class=''><th class='hide text-left'> You are priceless to me. <i><br>With love,<br>Valentine</i></th><th >Untouched</th><th >Color-shifted</th><th >Adjusted/Trimmed/Tweaked</th><th colspan='2' >Custom VFX</th></tr><tr><th class='w-25 '>VFX/Particles</th><td></td><td></td><td></td><td colspan='2' class='afs-large hover-container' >X</td></tr></table><div style='margin-bottom:5%;' class='flex ai-center flex-column'><div class='text-center'>This mod is considered:</div><img class='w-20 m-x-a text-center' src='/images/SS.png'/></div>",
+                "is_underlined":true
             }
         ],
         "version_history":[
             {
-                "version_number":"1.0.0.0",
-                "patch_note":"epic swag poggers time"
+                "version_number":"2.0.14.17",
+                "patch_note":"Updated animations, updated tornado, and fixed healthbar"
+            },
+            {
+                "version_number":"1.3.14.15",
+                "patch_note":"Fixed doppelganger icon;Fixed skin not playing audio"
+            },
+            {
+                "version_number":"1.2.14.10",
+                "patch_note":"Added ahri vfx to entire body to create shimmer"
+            },
+            {
+                "version_number":"1.1.13.8",
+                "patch_note":"Fixed weights"
+            },
+            {
+                "version_number":"1.0.13.5",
+                "patch_note":"Skin released to public"
             }
         ]
     },

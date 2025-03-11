@@ -8,8 +8,6 @@ const ModSection = (props,refs)=>{
     const sectionRef = useRef(null)
     useEffect(()=>{
         if(!sectionRef)return;
-        console.log("sectionRef.current: ",sectionRef.current);
-        
         sectionRef.current.innerHTML=props.data.entry_body
     },[])
     return(
@@ -29,7 +27,7 @@ export default function Post({set_nav_data}){
         set_nav_data([...data.GetPostByPostName.entry.map((ele)=>ele.entry_title),"Version","Download"])
     },[data])
     if(loading)return(<div>loading...</div>);
-    console.log("data: ",data.GetPostByPostName.entry[0]);
+    if(!data||!data.GetPostByPostName)return(<div>Loading</div>);
     document.title = data.GetPostByPostName.post_title+" | Valentine's mods"
     return(
         <div className="mod-info flex flex-column ai-center bg-primary">
@@ -52,18 +50,22 @@ export default function Post({set_nav_data}){
                 </h3>
                 <div className="simple-underline"></div>
                 <table className="w-50 m-x-a m-y-1">
-                    <tr>
-                        <th>Version number</th>
-                        <th>Patch notes</th>
-                    </tr>
-                    {
-                        data.GetPostByPostName.version_history.map((element)=>(
-                            <tr>
-                                <td>{element.version_number}</td>
-                                <td>{element.patch_note}</td>
-                            </tr>
-                        ))
-                    }
+                    <thead>
+                        <tr>
+                            <th>Version number</th>
+                            <th>Patch notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.GetPostByPostName.version_history.map((element,index)=>(
+                                <tr key={index}>
+                                    <td>{element.version_number}</td>
+                                    <td>{element.patch_note}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
                 </table>
                 <p className="text-center">
                     My version standard is as follows:<br/>&lt;MAJOR UPDATE NUM&gt;.&lt;MINOR UPDATE NUM&gt;.&lt;LEAGUE VERSION&gt;.&lt;LEAGUE VERSION&gt;<br/>

@@ -18,6 +18,7 @@ export const GetPostByPostName = gql`
 query GetPostByPostName($PostName: String!) {
     GetPostByPostName(PostName: $PostName) {
       _id
+      download_url_override
       entry {
         entry_body
         entry_title
