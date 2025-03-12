@@ -231,13 +231,63 @@
         "entry":[
             {
                 "entry_title":"Demonstration",
-                "entry_body":"<video>"
+                "entry_body":"<video controls class='basic-video-style m-y-5 m-x-a text-center w-50'><source src='/videos/large/DMC5-Dante-as-Samira.webm' type='video/webm'></video>"
+            },
+            {
+                "entry_title":"Mod info",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Mod info</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>For BASE SKIN Samira only. Will not work with other skins!</p>"
+            },
+            {
+                "entry_title":"Description",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Description</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>J A C K P O T.<br>This is a reskin of <a class='basic-anchor-style no-decor' href='https://www.runeforge.io/post/dante-samira'>Kinghound's Dante as Samira skin</a>The original mod used DMC3 Dante. This mod replaces the voicelines and model with DMC5 assets.</p>",
+                "is_underlined":true
+            },
+            {
+                "entry_title":"Credits",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Credits</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'> The assets were sourced by CAPCOM's DMC5 video game! All rights go to their respective owners. I do not claim to own any of the work/assets used by the mod. I do claim ownership of the <i>effort</i> put behind the formation of the mod itself.</p>"
+            },
+            {
+                "entry_title":"Bugs",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Bugs</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>His body looks horribly deformed. Yes, I know. Samira's body DOES NOT line up to Dante's at all. Because of this, the sword is also piercing his back. To fix this, you'd need to reanimate the skin, and there's around 80 animations for base skin Samira. And I don't get paid to do any of this. My obsession fuels me.</p>"
+            },
+            {
+                "entry_title":"How to contribute",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'> How to contribute</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'> ALL OF MY MODS ARE FREE TO MODIFY IN EXCHANGE FOR CREDIT! Send me a DM and I'll give you whatever file you need to get started, including the link to the repo! Just please, credit me, and all parties that deserve credit! I LOVE CLOUT. RAAAAAAAAAHHHH</p>"
+            },
+            {
+                "entry_title":"Optional software",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>Optional software</h3><div class='simple-underline'></div><p class='text-center w-50 m-x-a'>I made a macro that scans your screen and plays music based on your ult status as Samira. You can use any song you'd like, but I personally use Subhuman and Devil Trigger.    You must have a way to measure your screen, in pixels, and a text editor. If you have any troubles, or want the songs I use, please join my discord server and ping me!</p><a  style='margin-bottom:3%' target='_blank' class='basic-button w-20 no-decor m-x-a' href='https://github.com/AlecRuin/Samira-Rank-Autoplayer/releases/latest'><div class='txt-grad-quaternary shimmer text-center '>Download optional software</div></a>",
+                "is_underlined":true
+            },
+            {
+                "entry_title":"Mod rank",
+                "entry_body":"<h3 style='margin-bottom:0px' class='fs-large text-center highlight-text-style'>    Mod rank</h3><div class='simple-underline'></div><div class='popup '></div><table  class='text-center w-90 m-x-a m-y-1'><tr class='' style='text-wrap: wrap;'><th class='hide'>You went out of your way to look at my mod(s), and I couldn't be more grateful to you.</th><th  >What are weights???</th><th  >The model was given rough-weights</th><th  >The model has 0.5 weights on major joints, like arms and legs</th><th  >The model was 100% weighted by me</th><th  >This uses weights from the original source model</th></tr><tr  style='text-wrap: wrap;'><th class='w-25 '>Model/Weighting</th><td></td><td></td><td></td><td class='afs-large'>X</td><td></td></tr><tr class='' style='text-wrap: wrap;'><th class='hide'>I make these mods for you all, and I am fueled by the wonderful praise I received from each of you.</th><th  >I made them 😭</th><th  >Riot Games™ made them 😔</th><th  >Some animations were replaced utilizing various techniques</th><th  >Animations were created by source animations mirroring to the rig</th><th  >Animations were imported by the source</th></tr><tr><th class='w-25 '>Animations</th><td></td><td colspan='2' class='afs-large ' >X</td><td></td><td></td></tr><tr class='' style='text-wrap: wrap;'><th class='hide'>With each praise, I go back and make my mods better. You keep my mods alive and well, my life's work.</th><th  >I made them 😭</th><th  >Untouched</th><th  >Some voice lines were changed</th><th  >All the voice lines were changed</th><th  >Both voice lines and SFX were changed</th></tr><tr><th class='w-25 '>SFX and voice lines</th><td></td><td></td><td></td><td class='afs-large' >X</td><td></td></tr><tr class=''><th class='hide'>Because of you are who you are, I can keep going. And I hope to see you again.</th><th colspan='2'  >I made them 😭</th><th  >Untouched</th><th colspan='2'  >Created by a professional</th></tr><tr><th class='w-25 '>Ability Icons</th><td colspan='2' class='afs-large ' >X</td><td></td><td colspan='2'></td></tr><tr class=''><th class='hide text-left'> You are priceless to me. <i><br>With love,<br>Valentine</i></th><th  >Untouched</th><th  >Color-shifted</th><th  >Adjusted/Trimmed/Tweaked</th><th colspan='2'  >Custom VFX</th></tr><tr><th class='w-25 '>VFX/Particles</th><td class='afs-large'>X</td><td></td><td></td><td colspan='2'></td></tr></table><div class='flex jc-center flex-column ai-center'><div class='text-center'>This mod is considered:</div><img class='w-20' src='/images/SS.webp'/></div>"
             }
         ],
         "version_history":[
             {
-                "version_number":"1.0.0.0",
-                "patch_note":"epic swag poggers time"
+                "version_number":"1.3.15.4",
+                "patch_note":"Fixed missing healthbar"
+            },
+            {
+                "version_number":"1.3.15.3",
+                "patch_note":"Fixed missing assets with shockwave VFX"
+            },
+            {
+                "version_number":"1.3.14.17",
+                "patch_note":"Fixed font size of name above healthbar"
+            },
+            {
+                "version_number":"1.2.14.13",
+                "patch_note":"Replaced joke and taunt animations as well as voice line"
+            },
+            {
+                "version_number":"1.1.14.11",
+                "patch_note":"Fixed weight on coat on the legs, ability tool tips are no longer broken"
+            },
+            {
+                "version_number":"1.0.14.10",
+                "patch_note":"Skin released to public"
             }
         ]
     },
