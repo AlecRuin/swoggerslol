@@ -39,7 +39,7 @@ export default function Post({set_nav_data}){
                 data.GetPostByPostName.entry.map((ele,index)=>(
                     <>
                         <ModSection data={ele} key={index}/>
-                        {(ele.is_underlined)?<div style={{boxShadow:"0px 0px 12px 2px rgba(108,250,208, 0.74)"}} className="quaternary-underline quaternary-glowbox"></div>:""}
+                        {(ele.is_underlined)?<div style={{boxShadow:"0px 0px 12px 2px rgba(108,250,208, 0.74)"}} className="m-y-1 m-x-a quaternary-underline quaternary-glowbox"></div>:""}
                     </>
                 ))
             }

@@ -29,6 +29,7 @@ export default function Home({set_nav_data}){
             <Preview data={posts}/>
         )
         if(error)throw error;
+        document.title = "Valentine's mods"
         return(
             <>
                 <Carousel/>

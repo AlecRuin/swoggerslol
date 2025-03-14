@@ -152,7 +152,7 @@ h2,h3{
     box-shadow: 6px 7px 20px 10px rgba(0,0,0, 0.74);
     border: 5px solid var(--darker-primary);
     border-radius: 5px;
-    transition: top 0.5s ease-in-out;
+    transition: top 0.25s ease-in-out;
     aspect-ratio: 3/4;
 }
 .navigation-list{
@@ -186,14 +186,6 @@ h2,h3{
     margin-top: .15vw;
     margin-bottom: .15vw;
     background-color: var(--lightest-secondary);
-    margin: auto;
-}
-.quaternary-underline{
-    height: .1vw;
-    width: 95%;
-    margin-top: .15vw;
-    margin-bottom: .15vw;
-    background-color: var(--quaternary);
     margin: auto;
 }
 .navigation-title{
