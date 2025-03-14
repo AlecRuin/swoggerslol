@@ -35,7 +35,8 @@ h2,h3{
 /* #region banner  */
 .banner{
     background-image: url("/images/banner.webp");
-    width: 15%;
+    width: 20%;
+    min-width: 8vw;
     max-width: 10vw;
     object-fit: fill;
     overflow: visible;

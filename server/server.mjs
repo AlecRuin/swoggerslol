@@ -1,6 +1,6 @@
 import "dotenv/config"
 import express from "express"
-// import { default as rateLimit } from "express-rate-limit"
+import { default as rateLimit } from "express-rate-limit"
 // const  {default:ApolloServer} =require("@apollo/server")
 import { ApolloServer } from "@apollo/server"
 // import { expressMiddleware } from "@apollo/server/express4"
@@ -15,11 +15,11 @@ import {SetDir,ClearFile,Log} from "./utils/logging.mjs"
 import {ROUTES} from "./controllers/index.mjs"
 const APP = express()
 const PORT = process.env.PORT||3000;
-// const LIMITER = rateLimit({
-//     windowMs:15*60*1000, //15 mins
-//     max: 100, //Limit each IP to 100 requests per windowMs
-//     message:"Too many requests, please try again later."
-// })
+const LIMITER = rateLimit({
+    windowMs:15*60*1000, //15 mins
+    max: 100, //Limit each IP to 100 requests per windowMs
+    message:"Too many requests, please try again later."
+})
 const __DIRNAME = dirname(fileURLToPath(import.meta.url))
 const APOLLO = new ApolloServer({
     typeDefs,
@@ -42,6 +42,7 @@ async function AttemptConnections(){
         //connect middleware
         ApplyMiddleware(APP,APOLLO,__DIRNAME)
         //connect routes
+        APP.use(LIMITER)
         APP.use(ROUTES)
         APP.get("*", (req, res) => {
             res.sendFile(join(__DIRNAME, "../client/dist", "index.html"));
