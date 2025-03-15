@@ -5,7 +5,7 @@ import "./index.css"
 import { ApolloProvider,ApolloClient,HttpLink,InMemoryCache } from '@apollo/client'
 const client = new ApolloClient({
   link: new HttpLink({
-      uri:"http://localhost:3000/graphql"
+      uri:"https://www.swoggerslol.com/graphql"
   }),
   cache:new InMemoryCache(),
   connectToDevTools:true

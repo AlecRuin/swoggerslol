@@ -6,7 +6,8 @@
     "develop":"concurrently \"cd server && npm start\" \"cd client && npm run develop\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build":"cd client && npm run build",
-    "seed":"cd server && node seeds/index.mjs"
+    "seed":"cd server && node seeds/index.mjs",
+    "docker-rebuild": "docker-compose down && docker-compose build && docker-compose up -d"
   },
   "repository": {
     "type": "git",

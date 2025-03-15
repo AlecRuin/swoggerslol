@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { useState,useEffect } from 'react'
 import { GetAllPosts, hello } from '../utils/api/queries.mjs';
-import {Preview} from "../pages/index.mjs";
+import {Preview} from "./index.mjs";
 import {Carousel,Announcements} from "../features/index.mjs"
 import "./Home.css"
 
@@ -22,7 +22,6 @@ export default function Home({set_nav_data}){
             if(data){
                 setPosts(data.GetAllPosts)
                 set_nav_data(data.GetAllPosts.filter(ele=>!ele.is_active_project).map(post=>post.post_title))
-                console.log("chunky array: ",chunkArray(data.GetAllPosts,2));
             }
         },[data])
         if(loading)return (

@@ -73,25 +73,6 @@ export default function Carousel(){
     useEffect(() => {
         const items=itemsRef.current
         if(items.length<1)return;
-        //     // Adding event listeners      
-        //     console.log("items: ",items);
-        //     items.forEach((ele) => {
-        //       const handleEnded = () => changeVideo(ele);
-        //       console.log("ele: ",ele);
-              
-        //       ele.querySelector(".carousel-video").addEventListener("ended", handleEnded);
-        //       ele.querySelector(".carousel-video").defaultPlaybackRate=1.5
-        //       ele.querySelector(".carousel-video").playbackRate=1.5
-        //     });
-        // };
-        // const removeEventListeners = () => {
-        //     // Removing event listeners
-        //     if(!items[0])return;
-        //     items.forEach((ele) => {
-        //         const handleEnded = () => changeVideo(ele); // Same function to remove
-        //         ele.removeEventListener("ended", handleEnded);
-        //     });
-        // };
         showNextItem() 
         setPlaying(true)
     }, [refsReady]); 

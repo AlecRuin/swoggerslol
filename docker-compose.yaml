@@ -1,7 +1,25 @@
 services:
-  app1:
+  website1:
     build: .
     environment:
-      - APP_NAME=App1
+      - APP_NAME=Website1
     ports:
-      - "3001:3000"
+      - "3004:3000"
+    volumes:
+      - "C:/Users/Administrator/Desktop/swoggerslol/client/public:/app/client/public"
+  website2:
+    build: .
+    environment:
+      - APP_NAME=Website2
+    ports:
+      - "3005:3000"
+    volumes:
+      - "C:/Users/Administrator/Desktop/swoggerslol/client/public:/app/client/public"
+  website3:
+    build: .
+    environment:
+      - APP_NAME=Website3
+    ports:
+      - "3006:3000"
+    volumes:
+      - "C:/Users/Administrator/Desktop/swoggerslol/client/public:/app/client/public"

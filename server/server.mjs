@@ -17,8 +17,9 @@ const APP = express()
 const PORT = process.env.PORT||3000;
 const LIMITER = rateLimit({
     windowMs:15*60*1000, //15 mins
-    max: 100, //Limit each IP to 100 requests per windowMs
-    message:"Too many requests, please try again later."
+    max: 500, //Limit each IP to 100 requests per windowMs
+    message:"Too many requests, please try again later.",
+    skip:(req)=>req.path.startsWith("data")||req.path.startsWith("images")||req.path.startsWith("videos")
 })
 const __DIRNAME = dirname(fileURLToPath(import.meta.url))
 const APOLLO = new ApolloServer({
@@ -42,7 +43,7 @@ async function AttemptConnections(){
         //connect middleware
         ApplyMiddleware(APP,APOLLO,__DIRNAME)
         //connect routes
-        APP.use(LIMITER)
+        // APP.use(LIMITER)
         APP.use(ROUTES)
         APP.get("*", (req, res) => {
             res.sendFile(join(__DIRNAME, "../client/dist", "index.html"));

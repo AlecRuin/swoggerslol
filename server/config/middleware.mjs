@@ -18,4 +18,5 @@ export default function ApplyMiddleware(APP,APOLLO,__DIRNAME){
 
     APP.use("/graphql",expressMiddleware(APOLLO))
     APP.use(express.static(join(__DIRNAME,"../client/dist")))
+    APP.use(express.static(join(__DIRNAME,"../client/public")))
 }
